@@ -1,0 +1,47 @@
+
+import { MIRRORS, pingAllMirrors } from "./mirrors.js";
+import { getPreferredMirror, setPreferredMirror } from "./storage.js";
+import { getCurrentTab, openArchive, buildArchiveUrl } from "./tabs.js";
+import {
+  setUrlDisplay, setError,
+  populateMirrorSelect, applyPingResults,
+  getSelectedMirror, flashCopied
+} from "./ui.js";
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const archiveBtn = document.getElementById("archive-btn");
+  const copyBtn    = document.getElementById("copy-btn");
+  const mirrorSel  = document.getElementById("mirror-select");
+
+  const savedMirror = await getPreferredMirror();
+  populateMirrorSelect(MIRRORS, savedMirror);
+
+  pingAllMirrors().then(applyPingResults);
+
+  const tab = await getCurrentTab();
+  if (!tab) {
+    setError("Could not access current tab.");
+    archiveBtn.disabled = true;
+    copyBtn.disabled = true;
+    return;
+  }
+  const { hostname } = new URL(tab.url);
+  setUrlDisplay(hostname);
+
+  mirrorSel.addEventListener("change", () => setPreferredMirror(getSelectedMirror()));
+
+  archiveBtn.addEventListener("click", () => {
+    openArchive(getSelectedMirror(), tab.url);
+    window.close();
+  });
+
+  copyBtn.addEventListener("click", async () => {
+    const url = buildArchiveUrl(getSelectedMirror(), tab.url);
+    try {
+      await navigator.clipboard.writeText(url);
+      flashCopied();
+    } catch {
+      setError("Clipboard access denied.");
+    }
+  });
+});

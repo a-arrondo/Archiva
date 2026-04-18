@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 14px;
+      min-width: 250px;
+      font-family: system-ui, sans-serif;
+      background: #0f0f1a;
+      color: #e8e8f0;
+    }
+    h3 {
+      margin: 0 0 4px;
+      font-size: 18px;
+      color: #e8e8f0;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    #current-url {
+      font-size: 11px; color: #9090b0; word-break: break-all;
+      margin-bottom: 14px; max-height: 36px; overflow: hidden;
+      font-style: italic;
+    }
+    .mirror-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .mirror-row label { font-size: 11px; color: #b0b0cc; white-space: nowrap; font-weight: 500; }
+    .mirror-hint { font-size: 10px; color: #7070a0; margin-bottom: 14px; line-height: 1.5; }
+    select {
+      flex: 1; padding: 5px 8px; background: #1c1c2e; color: #e8e8f0;
+      border: 1px solid #3a3a5c; border-radius: 6px; font-size: 12px; cursor: pointer;
+    }
+    select:focus { outline: none; border-color: #e63946; }
+    .btn-row { display: flex; gap: 8px; }
+    button {
+      flex: 1; padding: 10px; background: #e63946; color: #fff; border: none;
+      border-radius: 7px; font-size: 13px; font-weight: 700; cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    button:hover { background: #c1121f; }
+    button:active { transform: scale(0.97); }
+    button:disabled { background: #3a3a5c; color: #6060a0; cursor: not-allowed; }
+    #copy-btn {
+      background: #252540; flex: 0 0 auto; font-size: 12px;
+      border: 1px solid #3a3a5c; color: #b0b0cc;
+    }
+    #copy-btn:hover:not(:disabled) { background: #30305a; color: #e8e8f0; }
+    .footer { margin-top: 12px; display: flex; justify-content: space-between; align-items: center; }
+    .gh-link {
+      font-size: 10px; color: #7070a0;
+      text-decoration: underline; text-underline-offset: 2px;
+    }
+    .gh-link:hover { color: #b0b0cc; }
+    .author { font-size: 10px; color: #7070a0; }
+  </style>
+</head>
+<body>
+  <h3><img src="./icons/icon24.png" width="24" height="24" style="vertical-align: middle; margin-right: 6px;">ArchiveIt</h3>
+  <div id="current-url">Loading...</div>
+  <div style="font-size:11px; color:#9090b0; margin-bottom:10px; line-height:1.5;">Saves a snapshot of the current page to an archive mirror, bypassing paywalls and preserving content.</div>
+  <div class="mirror-row">
+    <label for="mirror-select">Mirror:</label>
+    <select id="mirror-select"></select>
+  </div>
+  <div class="mirror-hint">If archiving fails or the page doesn't load, try a different mirror.</div>
+  <div class="btn-row">
+    <button id="archive-btn">Archive this page</button>
+    <button id="copy-btn">Copy URL</button>
+  </div>
+  <div class="footer">
+    <a class="gh-link" href="https://github.com/yourname/archiveit" target="_blank">More info here</a>
+    <div class="author">by Anonimous</div>
+  </div>
+  <div style="text-align: center; margin-top: 6px;">
+  <a href="https://www.flaticon.com/free-icons/files-and-folders" 
+     title="files and folders icons" 
+     target="_blank"
+     style="font-size: 9px; color: #7070a0;">
+    Icon by smashingstocks – Flaticon
+  </a>
+</div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
