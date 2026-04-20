@@ -1,0 +1,19 @@
+{
+    "extName": {"message": "Archívalo!"},
+    "extDesc": {"message": "Abre la página actual en Archive.today con un solo clic."},
+    "extTitle": {"message": "Abrir Archive.today"},
+    "heading": {"message": "Archívalo!"},
+    "mirrorLabel": {"message": "Espejo:"},
+    "mirrorHint": {"message": "Si el archivado falla o la página no carga, prueba con un espejo diferente."},
+    "archiveBtn": {"message": "Archivar esta página"},
+    "copyBtn": {"message": "Copiar URL"},
+    "copiedBtn": {"message": "¡Copiado!"},
+    "description": {"message": "Guarda una instantánea de la página actual, evitando los obstáculos de pago y preservando el contenido."},
+    "moreInfo": {"message": "Más información"},
+    "loading": {"message": "Cargando..."},
+    "errNoTab": {"message": "No se encontró ninguna pestaña activa."},
+    "errClipboard": {"message": "Acceso al portapapeles denegado. No se pudo copiar la URL."},
+    "offline": {"message": "sin conexión"},
+    "authorCredit": {"message": "por"},
+    "iconCredit": {"message": "Icono por"}
+}

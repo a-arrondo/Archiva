@@ -1,0 +1,19 @@
+{
+    "extName": {"message": "ArchiveIt!"},
+    "extDesc": {"message": "Opens the current page in Archive.today with a single click."},
+    "extTitle": {"message": "Open in Archive.today"},
+    "heading": {"message": "ArchiveIt!"},
+    "mirrorLabel": {"message": "Mirror:"},
+    "mirrorHint": {"message": "If archiving fails or the page doesn't load, try a different mirror."},
+    "archiveBtn": {"message": "Archive this page"},
+    "copyBtn": {"message": "Copy URL"},
+    "copiedBtn": {"message": "Copied!"},
+    "description": {"message": "Saves a snapshot of the current page, bypassing paywalls and preserving content."},
+    "moreInfo": {"message": "More info here"},
+    "loading": {"message": "Loading..."},
+    "errNoTab": {"message": "No active tab found."},
+    "errClipboard": {"message": "Clipboard access denied. Could not copy the URL."},
+    "offline": {"message": "(offline)"},
+    "authorCredit": {"message": "by"},
+    "iconCredit": {"message": "Icon by"}
+}
