@@ -1,13 +1,14 @@
-
-import { AUTHOR, ICON_CREDIT, MIRRORS } from "./consts.js";
+import { AUTHOR, ICON_CREDIT } from "./consts.js";
 import { applyI18n, t } from "./i18n.js";
 import { pingAllMirrors } from "./mirrors.js";
+import { MIRRORS } from "./consts.js";
 import { getPreferredMirror, setPreferredMirror } from "./storage.js";
 import { getCurrentTab, openArchive, buildArchiveUrl } from "./tabs.js";
 import {
   setUrlDisplay, setError,
   populateMirrorSelect, applyPingResults,
-  getSelectedMirror, flashCopied
+  getSelectedMirror, flashCopied,
+  showPinging
 } from "./ui.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const savedMirror = await getPreferredMirror();
   populateMirrorSelect(MIRRORS, savedMirror);
 
+  showPinging();
   pingAllMirrors().then(applyPingResults);
 
   const tab = await getCurrentTab();

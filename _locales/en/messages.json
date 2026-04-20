@@ -13,7 +13,8 @@
     "loading": {"message": "Loading..."},
     "errNoTab": {"message": "No active tab found."},
     "errClipboard": {"message": "Clipboard access denied. Could not copy the URL."},
-    "offline": {"message": "(offline)"},
+    "pinging": {"message": "Checking mirrors..."},
+    "offline": {"message": "offline"},
     "authorCredit": {"message": "by"},
     "iconCredit": {"message": "Icon by"}
 }

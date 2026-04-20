@@ -1,4 +1,3 @@
-
 import { t } from "./i18n.js";
 
 export function setUrlDisplay(text) {
@@ -23,7 +22,15 @@ export function populateMirrorSelect(mirrors, savedMirror) {
   if (savedMirror) sel.value = savedMirror;
 }
 
+export function showPinging() {
+  const indicator = document.getElementById("ping-indicator");
+  if (indicator) indicator.classList.remove("hidden");
+}
+
 export function applyPingResults(pingMap) {
+  const indicator = document.getElementById("ping-indicator");
+  if (indicator) indicator.classList.add("hidden");
+
   const sel = document.getElementById("mirror-select");
   const offlineLabel = t("offline");
   for (const opt of sel.options) {
