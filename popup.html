@@ -55,28 +55,28 @@
   </style>
 </head>
 <body>
-  <h3><img src="./icons/icon24.png" width="24" height="24" style="vertical-align: middle; margin-right: 6px;">ArchiveIt</h3>
-  <div id="current-url">Loading...</div>
-  <div style="font-size:11px; color:#9090b0; margin-bottom:10px; line-height:1.5;">Saves a snapshot of the current page to an archive mirror, bypassing paywalls and preserving content.</div>
+  <h3><img src="./icons/icon24.png" width="24" height="24" style="vertical-align: middle; margin-right: 6px;"><span data-i18n="heading"></span></h3>
+  <div id="current-url" data-i18n="loading"></div>
+  <div data-i18n="description" style="font-size:11px; color:#9090b0; margin-bottom:10px; line-height:1.5;"></div>
   <div class="mirror-row">
-    <label for="mirror-select">Mirror:</label>
+    <label data-i18n="mirrorLabel" for="mirror-select"></label>
     <select id="mirror-select"></select>
   </div>
-  <div class="mirror-hint">If archiving fails or the page doesn't load, try a different mirror.</div>
+  <div class="mirror-hint" data-i18n="mirrorHint"></div>
   <div class="btn-row">
-    <button id="archive-btn">Archive this page</button>
-    <button id="copy-btn">Copy URL</button>
+    <button id="archive-btn" data-i18n="archiveBtn"></button>
+    <button id="copy-btn" data-i18n="copyBtn"></button>
   </div>
   <div class="footer">
-    <a class="gh-link" href="https://github.com/a-arrondo/ArchiveIt" target="_blank">More info here</a>
-    <div class="author">by @a-arrondo</div>
+    <a class="gh-link" href="https://github.com/a-arrondo/ArchiveIt" target="_blank" data-i18n="moreInfo"></a>
+    <div class="author"></div>
   </div>
   <div style="text-align: center; margin-top: 6px;">
   <a href="https://www.flaticon.com/free-icons/files-and-folders" 
-     title="files and folders icons" 
-     target="_blank"
-     style="font-size: 9px; color: #7070a0;">
-    Icon by smashingstocks – Flaticon
+    title="files and folders icons" 
+    target="_blank"
+    class="flaticon-link"
+    style="font-size: 9px; color: #7070a0;">
   </a>
 </div>
   <script type="module" src="popup.js"></script>

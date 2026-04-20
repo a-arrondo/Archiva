@@ -1,4 +1,5 @@
 
+import { applyI18n, t } from "./i18n.js";
 import { MIRRORS, pingAllMirrors } from "./mirrors.js";
 import { getPreferredMirror, setPreferredMirror } from "./storage.js";
 import { getCurrentTab, openArchive, buildArchiveUrl } from "./tabs.js";
@@ -9,6 +10,9 @@ import {
 } from "./ui.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+  applyI18n();
+  document.querySelector(".author").textContent = `${t("authorCredit")} @a-arrondo`;
+  document.querySelector(".flaticon-link").textContent = `${t("iconCredit")} smashingstocks – Flaticon`;
   const archiveBtn = document.getElementById("archive-btn");
   const copyBtn    = document.getElementById("copy-btn");
   const mirrorSel  = document.getElementById("mirror-select");

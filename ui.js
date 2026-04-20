@@ -1,4 +1,6 @@
 
+import { t } from "./i18n.js";
+
 export function setUrlDisplay(text) {
   document.getElementById("current-url").textContent = text;
 }
@@ -23,10 +25,11 @@ export function populateMirrorSelect(mirrors, savedMirror) {
 
 export function applyPingResults(pingMap) {
   const sel = document.getElementById("mirror-select");
+  const offlineLabel = t("offline");
   for (const opt of sel.options) {
     const alive = pingMap.get(opt.value);
     opt.disabled = alive === false;
-    opt.textContent = opt.textContent.replace(/ \(offline\)$/, "") + (alive === false ? " (offline)" : "");
+    opt.textContent = opt.textContent.replace(` (${offlineLabel})`, "") + (alive === false ? ` (${offlineLabel})` : "");
     opt.style.opacity = alive === false ? "0.35" : "";
     opt.style.color = alive === false ? "#555" : "";
   }
@@ -44,10 +47,10 @@ export function getSelectedMirror() {
 
 export function flashCopied() {
   const btn = document.getElementById("copy-btn");
-  btn.textContent = "Copied!";
+  btn.textContent = t("copiedBtn");
   btn.style.background = "#2a9d8f";
   setTimeout(() => {
-    btn.textContent = "Copy URL";
+    btn.textContent = t("copyBtn");
     btn.style.background = "";
   }, 1500);
 }
