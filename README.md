@@ -1,4 +1,4 @@
-# <img src="icons/icon64.png" width="32" height="32" valign="middle"> ArchiveIt
+# <img src="icons/icon64.png" width="32" height="32" valign="middle"> Archiva
 
 A lightweight browser extension that saves the current page to [Archive.today](https://archive.today) with a single click — bypassing paywalls and preserving content.
 
@@ -36,14 +36,14 @@ A lightweight browser extension that saves the current page to [Archive.today](h
 2. Open browser and go to extensions
 3. Enable **Developer mode**
 4. Click **Load unpacked** and select the extension folder
-5. The ArchiveIt icon will appear in your toolbar
+5. The Archiva icon will appear in your toolbar
 
 ---
 
 ## Usage
 
 1. Navigate to any webpage you want to archive
-2. Click the **ArchiveIt** toolbar icon
+2. Click the **Archiva** toolbar icon
 3. Choose a mirror from the dropdown (optional)
 4. Click **Archive this page** — a new tab opens with the archived snapshot
 5. Or click **Copy URL** to copy the archive link to your clipboard
@@ -55,7 +55,7 @@ If a mirror is slow or fails, switch to another from the dropdown and try again.
 ## Project Structure
 
 ```
-ArchiveIt/
+Archiva/
 ├── manifest.json     # Extension manifest (MV3)
 ├── popup.html        # Popup UI
 ├── popup.js          # Popup entry point

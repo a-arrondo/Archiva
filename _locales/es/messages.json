@@ -1,8 +1,8 @@
 {
-    "extName": {"message": "Archívalo!"},
+    "extName": {"message": "Archiva"},
     "extDesc": {"message": "Abre la página actual en Archive.today con un solo clic."},
     "extTitle": {"message": "Abrir Archive.today"},
-    "heading": {"message": "Archívalo!"},
+    "heading": {"message": "Archiva"},
     "mirrorLabel": {"message": "Espejo:"},
     "mirrorHint": {"message": "Si el archivado falla o la página no carga, prueba con un espejo diferente."},
     "archiveBtn": {"message": "Archivar esta página"},
