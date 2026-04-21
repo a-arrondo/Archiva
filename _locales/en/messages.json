@@ -1,6 +1,6 @@
 {
     "extName": {"message": "Archiva"},
-    "extDesc": {"message": "Opens the current page in Archive.today with a single click."},
+    "extDesc": {"message": "Redirects the current page to Archive.today, bypassing paywalls and preserving content."},
     "extTitle": {"message": "Open in Archive.today"},
     "heading": {"message": "Archiva"},
     "mirrorLabel": {"message": "Mirror:"},

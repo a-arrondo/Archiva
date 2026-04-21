@@ -1,6 +1,6 @@
 {
     "extName": {"message": "Archiva"},
-    "extDesc": {"message": "Abre la página actual en Archive.today con un solo clic."},
+    "extDesc": {"message": "Redirige la página actual a Archive.today, evitando las pasarelas de pago y preservando el contenido."},
     "extTitle": {"message": "Abrir Archive.today"},
     "heading": {"message": "Archiva"},
     "mirrorLabel": {"message": "Espejo:"},
@@ -8,7 +8,7 @@
     "archiveBtn": {"message": "Archivar esta página"},
     "copyBtn": {"message": "Copiar URL"},
     "copiedBtn": {"message": "¡Copiado!"},
-    "description": {"message": "Guarda una instantánea de la página actual, evitando los obstáculos de pago y preservando el contenido."},
+    "description": {"message": "Guarda una instantánea de la página actual, evitando las pasarelas de pago y preservando el contenido."},
     "moreInfo": {"message": "Más información"},
     "loading": {"message": "Cargando..."},
     "errNoTab": {"message": "No se encontró ninguna pestaña activa."},
