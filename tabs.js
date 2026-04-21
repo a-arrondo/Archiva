@@ -1,11 +1,12 @@
 
+import { t } from "./i18n.js";
+
 export async function getCurrentTab() {
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (!tab?.url) throw new Error("No URL on active tab");
+    if (!tab?.url) throw new Error(t("errNoTab"));
     return tab;
   } catch (err) {
-    console.error("tabs.getCurrentTab failed:", err);
     return null;
   }
 }
