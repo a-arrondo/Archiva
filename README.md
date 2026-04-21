@@ -1,4 +1,4 @@
-# <img src="icons/icon64.png" width="32" height="32" valign="middle"> ArchiveIt
+# <img src="icons/icon64.png" width="32" height="32" valign="middle"> Archiva
 
 A lightweight browser extension that saves the current page to [Archive.today](https://archive.today) with a single click — bypassing paywalls and preserving content.
 
