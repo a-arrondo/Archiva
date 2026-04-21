@@ -1,0 +1,20 @@
+{
+    "extName": {"message": "Archiva"},
+    "extDesc": {"message": "Egungo orria Archive.today-ra berbideratzen du, ordainketa hormak saiheztus eta edukia mantenduz."},
+    "extTitle": {"message": "Archive.today-en ireki"},
+    "heading": {"message": "Archiva"},
+    "mirrorLabel": {"message": "Ispilua:"},
+    "mirrorHint": {"message": "Artxibatzeak huts egingo balu ala orria kargatuko ez balitz, saiatu beste ispilu batekin."},
+    "archiveBtn": {"message": "Artxibatu egungo orria"},
+    "copyBtn": {"message": "URL-a kopiatu"},
+    "copiedBtn": {"message": "Kopiatuta!"},
+    "description": {"message": "Egungo orriaren argazkia gordetzen du, ordainketa hormak saiheztuz eta edukia mantenduz."},
+    "moreInfo": {"message": "Informazio gehiago hemen"},
+    "loading": {"message": "Kargatzen..."},
+    "errNoTab": {"message": "Ez da fitxa aktiborik aurkitu."},
+    "errClipboard": {"message": "Arbela atzitzea ukatuta. Ezin da URL-a kopiatu."},
+    "pinging": {"message": "Ispiluak egiaztatzen..."},
+    "offline": {"message": "konexiorik gabe"},
+    "authorCredit": {"message": "Egilea:"},
+    "iconCredit": {"message": "Ikonoaren eskerrak:"}
+}
