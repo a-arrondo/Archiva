@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const tab = await getCurrentTab();
   if (!tab) {
-    setError("Could not access current tab.");
+    setError(t("errNoTab"));
     archiveBtn.disabled = true;
     copyBtn.disabled = true;
     return;
