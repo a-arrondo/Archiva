@@ -16,5 +16,7 @@
     "pinging": {"message": "Checking mirrors..."},
     "offline": {"message": "offline"},
     "authorCredit": {"message": "by"},
-    "iconCredit": {"message": "Icon by"}
+    "iconCredit": {"message": "Icon by"},
+    "cmdArchiveTab": {"message": "Archive current tab with Archiva"},
+    "notArchivable": {"message": "This page cannot be archived."}
 }

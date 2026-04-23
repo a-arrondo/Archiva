@@ -16,5 +16,7 @@
     "pinging": {"message": "Vérification des miroirs..."},
     "offline": {"message": "hors ligne"},
     "authorCredit": {"message": "par"},
-    "iconCredit": {"message": "Icône par"}
+    "iconCredit": {"message": "Icône par"},
+    "cmdArchiveTab": {"message": "Archiver l'onglet actuel avec Archiva"},
+    "notArchivable": {"message": "Cette page ne peut pas être archivée."}
 }

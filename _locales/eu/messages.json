@@ -16,5 +16,7 @@
     "pinging": {"message": "Ispiluak egiaztatzen..."},
     "offline": {"message": "konexiorik gabe"},
     "authorCredit": {"message": "Egilea:"},
-    "iconCredit": {"message": "Ikonoaren eskerrak:"}
+    "iconCredit": {"message": "Ikonoaren eskerrak:"},
+    "cmdArchiveTab": {"message": "Artxibatu egungo fitxa Archivarekin"},
+    "notArchivable": {"message": "Orri hau ezin da artxibatu."}
 }
