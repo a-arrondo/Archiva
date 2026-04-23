@@ -1,23 +1,16 @@
 
-export const MIRRORS = [
-  { label: "archive.today", url: "https://archive.today" },
-  { label: "archive.ph",    url: "https://archive.ph"    },
-  { label: "archive.is",    url: "https://archive.is"    },
-  { label: "archive.li",    url: "https://archive.li"    },
-  { label: "archive.vn",    url: "https://archive.vn"    },
-  { label: "archive.fo",    url: "https://archive.fo"    },
-  { label: "archive.md",    url: "https://archive.md"    },
-];
+import { PING_TIMEOUT, MIRRORS } from "./consts.js";
 
 
-export async function pingMirror(mirrorUrl, timeoutMs = 3000) {
+export async function pingMirror(mirrorUrl, timeoutMs = PING_TIMEOUT) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
+  const t0 = Date.now();
   try {
     await fetch(mirrorUrl, { method: "HEAD", signal: controller.signal, mode: "no-cors" });
-    return true;
+    return { alive: true, latency: Date.now() - t0 };
   } catch {
-    return false;
+    return { alive: false, latency: Infinity };
   } finally {
     clearTimeout(timer);
   }
