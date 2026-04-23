@@ -18,5 +18,7 @@
     "authorCredit": {"message": "par"},
     "iconCredit": {"message": "Icône par"},
     "cmdArchiveTab": {"message": "Archiver l'onglet actuel avec Archiva"},
-    "notArchivable": {"message": "Cette page ne peut pas être archivée."}
+    "notArchivable": {"message": "Cette page ne peut pas être archivée."},
+    "contextMenuArchivePage": {"message": "Archiver cette page"},
+    "contextMenuArchiveLink": {"message": "Archiver ce lien"}
 }

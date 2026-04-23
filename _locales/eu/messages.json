@@ -18,5 +18,7 @@
     "authorCredit": {"message": "Egilea:"},
     "iconCredit": {"message": "Ikonoaren eskerrak:"},
     "cmdArchiveTab": {"message": "Artxibatu egungo fitxa Archivarekin"},
-    "notArchivable": {"message": "Orri hau ezin da artxibatu."}
+    "notArchivable": {"message": "Orri hau ezin da artxibatu."},
+    "contextMenuArchivePage": {"message": "Artxibatu orri hau"},
+    "contextMenuArchiveLink": {"message": "Artxibatu esteka hau"}
 }

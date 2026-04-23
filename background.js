@@ -2,17 +2,18 @@
 import { MIRRORS } from "./consts.js";
 import { getPreferredMirror } from "./storage.js";
 import { buildArchiveUrl } from "./tabs.js";
+import { t } from "./i18n.js";
 
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "archive-page",
-    title: "Archive this page",
+    title: t("contextMenuArchivePage"),
     contexts: ["page"]
   });
   chrome.contextMenus.create({
     id: "archive-link",
-    title: "Archive this link",
+    title: t("contextMenuArchiveLink"),
     contexts: ["link"]
   });
 });
