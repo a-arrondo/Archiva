@@ -22,8 +22,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   const savedMirror = await getPreferredMirror();
   populateMirrorSelect(MIRRORS, savedMirror);
 
+  if (!savedMirror) {
+    mirrorSel.disabled  = true;
+    archiveBtn.disabled = true;
+    copyBtn.disabled    = true;
+  }
+
   showPinging();
-  pingAllMirrors().then(applyPingResults);
+  pingAllMirrors().then(results => {
+    applyPingResults(results, savedMirror);
+    if (!savedMirror) {
+      // Persist auto-selected fastest so next open is instant.
+      setPreferredMirror(getSelectedMirror());
+      mirrorSel.disabled  = false;
+      archiveBtn.disabled = false;
+      copyBtn.disabled    = false;
+    }
+  });
 
   const tab = await getCurrentTab();
   if (!tab) {
@@ -32,14 +47,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     copyBtn.disabled = true;
     return;
   }
+
   const { hostname } = new URL(tab.url);
+  if (/^archive\./i.test(hostname)) {
+    setUrlDisplay(hostname);
+    setError(t("notArchivable"));
+    archiveBtn.disabled = true;
+    copyBtn.disabled = true;
+    return;
+  }
+
   setUrlDisplay(hostname);
 
   mirrorSel.addEventListener("change", () => setPreferredMirror(getSelectedMirror()));
 
   archiveBtn.addEventListener("click", () => {
     openArchive(getSelectedMirror(), tab.url);
-    window.close();
+    // window.close();
   });
 
   copyBtn.addEventListener("click", async () => {

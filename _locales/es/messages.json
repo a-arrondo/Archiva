@@ -16,5 +16,9 @@
     "pinging": {"message": "Comprobando espejos..."},
     "offline": {"message": "sin conexión"},
     "authorCredit": {"message": "por"},
-    "iconCredit": {"message": "Icono por"}
+    "iconCredit": {"message": "Icono por"},
+    "cmdArchiveTab": {"message": "Archivar la pestaña actual con Archiva"},
+    "notArchivable": {"message": "Esta página no puede ser archivada."},
+    "contextMenuArchivePage": {"message": "Archivar esta página"},
+    "contextMenuArchiveLink": {"message": "Archivar este enlace"}
 }
